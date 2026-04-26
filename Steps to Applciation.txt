@@ -1,0 +1,56 @@
+How to Run the Project
+
+Follow the steps below to reproduce the results and run the application:
+
+Generate Dataset
+
+Run the data generation notebook:
+
+
+jupyter notebook "gen data.ipynb"
+
+
+Train Models
+
+Execute the following notebooks in order to train all required models:
+
+
+jupyter notebook train_clinical.ipynb
+jupyter notebook train_ecg.ipynb
+jupyter notebook train_ecg_image_signal.ipynb
+
+
+These notebooks will:
+
+* Train clinical prediction models
+* Train ECG signal-based models
+* Train ECG image-based deep learning models
+* Save the trained models for later use in the application
+
+
+
+Run the Application
+
+After successfully training and saving the models, launch the Streamlit application:
+
+on the command prompt
+streamlit run app.py
+
+
+
+
+Final Output
+
+Once the app is running, you will be able to:
+
+* Input clinical and ECG data
+* Get heart disease predictions
+* View visual insights
+* Generate AI-based medical reports
+
+
+Important Notes
+
+* Ensure all notebooks are executed **before running the app**
+* Trained model files must exist in the project directory
+* Add your own **Google Gemini API key** in `app.py` for AI report generation
